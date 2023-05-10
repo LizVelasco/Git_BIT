@@ -1,0 +1,39 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="estilos.css"/>
+        <title>Formulario</title>
+    </head>
+    <body>
+
+        <h1 style="color:darkorchid"></h1>
+
+
+        <form method="post">
+            <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" value="">
+                </li>
+                <li>
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" id="lastname" value="">
+                </li>
+                <li>
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" value="" required placeholder="email@dominio.com">
+                </li>
+                <li>
+                    <label for="date">Fecha de nacimiento:</label>
+                    <input type="date" id="date" value="valor">
+                </li>
+                <li>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>
