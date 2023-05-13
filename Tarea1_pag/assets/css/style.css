@@ -1,0 +1,395 @@
+/*Estilos globales*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100vw;
+}
+
+/*header*/
+
+.header__container{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background-color: #08345d;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 2;
+}
+
+.menu a{
+    color: white;
+    font-size: medium;
+    text-transform: uppercase;
+    text-decoration:none;
+    font-weight: 400;
+    transition: all 0.4s;
+    padding: 0 10px;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+    line-height: 50px;
+    justify-content: center;
+}
+
+.menu a:hover{
+    color:  cornflowerblue;
+    font-size: 18px;
+}
+
+.container__logo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:30px;
+    color: whitesmoke;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+    color: white;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+#check{
+    display: none;
+}
+
+/*Banner*/
+.banner{
+    padding: 0 50px;
+    display: grid;
+    background-image: url(../img/1.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    place-items: center;
+    background-color: white;
+    position: relative;
+}
+
+.banner_text{
+    z-index: 1;
+}
+
+.banner::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.banner__text h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 55px;
+    position: relative;
+}
+
+.banner__text p{
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.banner__text a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #08345d;
+    padding: 20px 35px;
+    display: inline-block;
+    margin-top: 50px;
+    border-radius: 24px;
+    border: 2px solid cornflowerblue;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.banner a:hover{
+    background-color: cornflowerblue;
+}
+
+/*About*/
+
+.about{
+    padding: 40 px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section-header{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.section-header h2{
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-header p{
+    padding-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.9;
+}
+
+.single-about img{
+    width: 40%;
+    object-fit: cover;
+}
+
+.single-about h2{
+    font-size: 35px;
+    padding-top: 30px;
+}
+
+.single-about p{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    line-height: 1.4;
+}
+
+.service{
+    padding: 40px;
+}
+
+.section-header h2{
+    font-size: 35px;
+    padding-top: 40px;
+}
+
+.section-header p{
+    width: 50%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.service-content{
+    justify-content: center center;
+    display: flex;
+    text-align: center;
+}
+
+.service-content img{
+    width: 80%;
+    border-radius: 10%;
+}
+
+.service-content h2{
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.service-content p{
+    line-height: 1.4;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*Contact*/
+
+.contact{
+    padding: 40px 0;
+}
+
+.section-header h2{
+    text-transform: uppercase;
+    margin: 20px 0px;
+    text-align:center;
+}
+
+.single-contact{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-contact input{
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    border-bottom: 3px solid #08345d;
+    font-size: 15px;
+}
+
+.single-contact textarea{
+    width: 90%;
+    height: 120px;
+    border: none;
+    border-bottom:3px solid #08345d;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.single-contact input:last-child{
+    border: none;
+    background-color: #08345d;
+    color: white;
+}
+
+.single-contact input:last-child:hover{
+    background-color: cornflowerblue;
+}
+
+/*footer*/
+
+footer{
+    background-color: #08345d;
+    color: white;
+    line-height: 2;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+
+/*Responsive*/
+@media (max-width: 768px){
+    /*header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .mostrar-menu:hover{
+        color:  cornflowerblue;
+    }
+    .esconder-menu:hover{
+        color:  cornflowerblue;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #08345d;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .menu a:hover{
+        color:  cornflowerblue;
+        font-size: 18px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .service-content{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 360px){
+    /*header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .mostrar-menu:hover{
+        color:  cornflowerblue;
+    }
+    .esconder-menu:hover{
+        color:  cornflowerblue;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #08345d;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .menu a:hover{
+        color:  cornflowerblue;
+        font-size: 18px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .service-content{
+        flex-direction: column;
+    }
+}
